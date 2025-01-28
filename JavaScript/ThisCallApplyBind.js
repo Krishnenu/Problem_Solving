@@ -30,6 +30,7 @@ let name = {
   firstName: "Krishnendu",
   lastName: "Narayan",
 };
+
 let printFullName = function (homeTown, state) {
   console.log(
     this.firstName + " " + this.lastName + " " + homeTown + " " + state
