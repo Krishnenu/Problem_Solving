@@ -21,3 +21,10 @@ let items = [
 //       ]
 //     }
 //   }
+
+function nestedGrouping(items) {
+  let res = {};
+  for (let i = 0; i < items.length; i++) {}
+}
+
+console.log(nestedGrouping(items));
