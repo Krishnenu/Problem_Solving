@@ -5,12 +5,20 @@ const array = [1, 3, 2, 4, 5];
 // initialise accumulator with current value;
 //if current value of accumulator ==0 then this[i] and not then cb(this[i],i,arr);
 
-Array.prototype.myReduce = function (cb, initialVal) {
-  let accumulator = initialVal;
+// Array.prototype.myReduce = function (cb, initialVal) {
+//   let accumulator = initialVal;
+//   for (let i = 0; i < this.length; i++) {
+//     accumulator = accumulator ? cb(accumulator, this[i]) : this[i];
+//   }
+//   return accumulator;
+// };
+
+console.log(array.myReduce((acc, cur) => acc + cur, 9));
+
+Array.prototype.myReduce = function (fn, initialValue) {
+  let accumulator = initialValue;
   for (let i = 0; i < this.length; i++) {
-    accumulator = accumulator ? cb(accumulator, this[i]) : this[i];
+    accumulator = accumulator ? fn(accumulator, this[i]) : this[i];
   }
   return accumulator;
 };
-
-console.log(array.myReduce((acc, cur) => acc + cur, 9));
