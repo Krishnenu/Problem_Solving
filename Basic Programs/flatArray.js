@@ -41,4 +41,10 @@ function flatArray(arr) {
   return res;
 }
 
+// function flatArray(arr) {
+//   return arr.reduce((acc, curr) => {
+//     return Array.isArray(curr) ? acc.concat(flatArray(curr)) : acc.concat(curr);
+//   }, []);
+// }
+
 console.log(flatArray(arr));

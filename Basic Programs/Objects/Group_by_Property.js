@@ -18,11 +18,10 @@ let products = [
 //     ]
 //   }
 
-function groupByProperty(arr) {
+function groupByProperty(products) {
   let res = {};
-  for (let i = 0; i < arr.length; i++) {
-    let item = arr[i];
-    let category = item.category;
+  for (let item of products) {
+    let { category } = item;
     if (!res[category]) {
       res[category] = [];
     }
@@ -32,3 +31,16 @@ function groupByProperty(arr) {
 }
 
 console.log(groupByProperty(products));
+
+// function groupByProperty(arr) {
+//   let res = {};
+//   for (let i = 0; i < arr.length; i++) {
+//     let item = arr[i];
+//     let category = item.category;
+//     if (!res[category]) {
+//       res[category] = [];
+//     }
+//     res[category].push(item);
+//   }
+//   return res;
+// }

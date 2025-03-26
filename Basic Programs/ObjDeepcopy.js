@@ -17,6 +17,3 @@ const obj1 = { a: 10, b: "Hii" };
 // }
 
 // console.log(deepCopy(obj1));
-
-
-function 
