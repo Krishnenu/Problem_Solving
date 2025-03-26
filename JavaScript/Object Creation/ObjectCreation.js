@@ -56,7 +56,7 @@ function factory(){
         print:function (){
             console.log(this);
         }
-    return Object.create(prototype)
+    return Object.create(prototype);
     }
 }
 
