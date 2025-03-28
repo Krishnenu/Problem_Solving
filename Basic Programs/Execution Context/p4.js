@@ -1,5 +1,5 @@
 function hello() {
-  //   name = this.name;
+  // name = this.name;
   setTimeout(function () {
     console.log(this.name);
   }, 100);
