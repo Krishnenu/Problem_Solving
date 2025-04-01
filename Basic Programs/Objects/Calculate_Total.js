@@ -5,3 +5,17 @@ let cart = [
 ];
 
 // 9.6
+
+function calc(arr) {
+  // let totalPrice = 0;
+  // for (let item of arr) {
+  //   if (item.price) {
+  //     totalPrice = totalPrice + item.price;
+  //     // console.log(totalPrice);
+  //   }
+  // }
+  // return totalPrice;
+  return arr.reduce((acc, curr) => acc + curr.price, 0);
+}
+
+console.log(calc(cart));
