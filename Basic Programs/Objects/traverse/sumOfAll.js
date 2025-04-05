@@ -1,3 +1,5 @@
+// sum of values in Object:
+
 const obj = { a: 1, b: { c: 2 }, d: [3, 4] };
 
 function sumOfAll(obj) {

@@ -1,3 +1,5 @@
+// value comparision in Object:
+
 const obj = { a: 1, b: { c: 2 }, d: [3, { e: 5 }] };
 
 // value = 4 op=true;
