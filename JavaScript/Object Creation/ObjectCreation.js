@@ -48,51 +48,44 @@ function factoryMethod() {
 let a = factoryMethod();
 let c = factoryMethod();
 
-
 //6
 
-function factory(){
-    const prototype={
-        print:function (){
-            console.log(this);
-        }
-    return Object.create(prototype);
-    }
+function factory() {
+  const prototype = {
+    print: function () {
+      console.log(this);
+    },
+  };
+  return Object.create(prototype);
 }
 
 // 7
 
-function f(){
-        
-}
+function f() {}
 
 new f();
 
-function f2(name){
-    this.name=name;
-        
+function f2(name) {
+  this.name = name;
 }
-
 
 new f2("lalla");
-let m=new f2("abc");
+let m = new f2("abc");
 
-let n=new f2("abc");
+let n = new f2("abc");
 
-f2.prototype.getName=function (){
-    console.log(this.name);
-}
+f2.prototype.getName = function () {
+  console.log(this.name);
+};
 
 //8
-class Student{
-    constructor(name){
-    this.name=name;
-    }
-    getName(){
-        console.log(this.name);
-    }
-
+class Student {
+  constructor(name) {
+    this.name = name;
+  }
+  getName() {
+    console.log(this.name);
+  }
 }
 
-
-let stu=new Student("lalla");
+let stu = new Student("lalla");

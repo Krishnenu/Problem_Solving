@@ -31,6 +31,7 @@ function creteOrder(cart) {
 function validatecart(cart) {
   return true;
 }
+
 function proceedToPayment(orderID) {
   return new Promise((res, rej) => {
     res("Payment done!!");
