@@ -21,7 +21,7 @@ function customPromise(promises) {
     let results = [];
     let completed = 0;
 
-    promises.forEach((promise, index) => {
+    promises.forEach((promise) => {
       promise
         .then((res) => {
           results.push(res);
