@@ -31,24 +31,24 @@
 let str = "[({})]{";
 
 function checkIsValidParenthesis(str) {
+  let stack = [];
   const pairs = {
-    "(": ")",
-    "{": "}",
-    "[": "]",
+    ")": "(",
+    "}": "{",
+    "]": "[",
   };
 
-  let res = [];
-
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] === "(" || str[i] === "{" || str[i] === "[") {
-      res.push(str[i]);
-    } else if (str[i] === ")" || str[i] === "}" || str[i] === "]") {
-      if (res.pop() === pairs[str[i]]) {
+  for (let ch of str) {
+    if (ch === "(" || ch === "{" || ch === "[") {
+      stack.push(ch);
+    } else if (ch === ")" || ch === "}" || ch === "]") {
+      if (stack.pop() !== pairs[ch]) {
         return false;
       }
     }
   }
-  return res.length === 0;
+
+  return stack.length === 0;
 }
 
 console.log(checkIsValidParenthesis(str));
